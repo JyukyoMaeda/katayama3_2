@@ -1,0 +1,17 @@
+
+// 基本構造
+.l-container{
+	width: 100%;
+	height: auto;
+	margin-top: 15.1%;
+	@include mq(tb){
+		margin-top: 120px;
+	}
+	@include mq(tb-pc1000){
+		margin-top: 14%;
+	}
+	@include mq(tb-pc1400){
+		margin-top: 11.1%;
+	}
+}
+

@@ -503,11 +503,11 @@ img {
   background-repeat: no-repeat;
 }
 .l-contents.-img-bg .imgBox.-parallax.-parallax_bg {
-  background-image: url(../images/bg/header_bg_s.jpg);
+  background-image: url(../images/bg/dot-bg_s.jpg);
 }
 @media screen and (min-width: 767px) {
   .l-contents.-img-bg .imgBox.-parallax.-parallax_bg {
-    background-image: url(../images/bg/header_bg.jpg);
+    background-image: url(../images/bg/dot-bg.jpg);
   }
 }
 .l-contents.-img-bg .l-contentsBox {
@@ -553,6 +553,46 @@ img {
 .l-contents.-img-bg .l-contentsBox.-bottom-leftBtn a {
   display: block;
   padding: 0% 24%;
+}
+.l-contents.-img-bg .l-contentsBox.-cloud {
+  width: 45%;
+}
+@media screen and (min-width: 767px) {
+  .l-contents.-img-bg .l-contentsBox.-cloud {
+    width: 20%;
+  }
+}
+.l-contents.-img-bg .l-contentsBox.-cloud01 {
+  top: 50%;
+  left: 50%;
+}
+@media screen and (min-width: 767px) {
+  .l-contents.-img-bg .l-contentsBox.-cloud01 {
+    top: 39%;
+    left: 30%;
+  }
+}
+.l-contents.-img-bg .l-contentsBox.-cloud02 {
+  top: 50%;
+  left: 50%;
+}
+@media screen and (min-width: 767px) {
+  .l-contents.-img-bg .l-contentsBox.-cloud02 {
+    top: 44%;
+    left: 72%;
+    width: 17%;
+  }
+}
+.l-contents.-img-bg .l-contentsBox.-cloud03 {
+  top: 50%;
+  left: 50%;
+}
+@media screen and (min-width: 767px) {
+  .l-contents.-img-bg .l-contentsBox.-cloud03 {
+    top: 66%;
+    left: 43%;
+    width: 17%;
+  }
 }
 .l-contents.-img-bg .l-contentsBox .l-contentsBox--wrapper {
   width: 100%;

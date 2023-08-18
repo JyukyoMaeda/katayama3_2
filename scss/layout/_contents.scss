@@ -24,6 +24,12 @@
 						background-image: url(../images/bg/dot-bg.jpg);
 					}
 				}
+				&.-parallax_bg02{//ここに背景を指定する。
+					background-image: url(../images/bg/dot02-bg_s.jpg);
+					@include mq(tb){
+						background-image: url(../images/bg/dot02-bg.jpg);
+					}
+				}
 			}
 		}
 		.l-contentsBox{// コンテンツ要素

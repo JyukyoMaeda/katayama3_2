@@ -115,6 +115,21 @@
 				}
 			}
 
+			// for_mama
+			&.-mama_btn{
+				background: $site-color01;
+				border: 1px solid white;
+				transition: all .25s;
+				@include mq(tb){
+					top: 60%;
+					left: 16.5%;
+					width: 13%;
+					&:hover{
+						background: $site-color01-hover;
+					}
+				}
+			}
+
 
 
 			.l-contentsBox--wrapper{

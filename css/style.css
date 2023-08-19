@@ -128,6 +128,9 @@ img {
   max-width: 1200px;
   margin: auto;
 }
+.w1200.-s85 {
+  width: 85% !important;
+}
 .w1200.-s100 {
   width: 100% !important;
 }
@@ -602,19 +605,40 @@ img {
     width: 17%;
   }
 }
-.l-contents.-img-bg .l-contentsBox.-mama_btn {
-  background: #002a37;
-  border: 1px solid white;
-  transition: all 0.25s;
-}
 @media screen and (min-width: 767px) {
   .l-contents.-img-bg .l-contentsBox.-mama_btn {
     top: 60%;
     left: 16.5%;
     width: 13%;
   }
-  .l-contents.-img-bg .l-contentsBox.-mama_btn:hover {
-    background: #e2a739;
+}
+@media screen and (min-width: 767px) {
+  .l-contents.-img-bg .l-contentsBox.-setsubi-point {
+    top: 27%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35%;
+    max-width: 700px;
+  }
+}
+.l-contents.-img-bg .l-contentsBox.-setsubi-cloud {
+  width: 50%;
+}
+@media screen and (min-width: 767px) {
+  .l-contents.-img-bg .l-contentsBox.-setsubi-cloud {
+    width: 13%;
+  }
+}
+@media screen and (min-width: 767px) {
+  .l-contents.-img-bg .l-contentsBox.-setsubi-cloud01 {
+    top: 50%;
+    left: 50%;
+  }
+}
+@media screen and (min-width: 767px) {
+  .l-contents.-img-bg .l-contentsBox.-setsubi-cloud02 {
+    top: 50%;
+    left: 74%;
   }
 }
 .l-contents.-img-bg .l-contentsBox .l-contentsBox--wrapper {
@@ -1778,6 +1802,40 @@ img {
     transform: scale(0.95);
     transition-duration: 0.2s;
   }
+}
+.l-linkImg.-p04 {
+  display: block;
+  width: 100%;
+  border: 1px solid white;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+.l-linkImg.-p04 img {
+  background: #002a37;
+  transition: all 0.5s;
+  z-index: -1;
+}
+.l-linkImg.-p04::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 0%;
+  display: block;
+  background: #e2a739;
+  transition: all 0.5s;
+  z-index: -2;
+}
+.l-linkImg.-p04:hover {
+  border: 1px solid inherit !important;
+  border-radius: 30px;
+  transform: scale(0.95);
+}
+.l-linkImg.-p04:hover img {
+  background: inherit;
+}
+.l-linkImg.-p04:hover::after {
+  width: 100%;
 }
 .l-linkImg.-contact {
   display: block;
@@ -2950,147 +3008,81 @@ svg#bottomBtn_right .cls-2 {
     アコーディオン関係
 
 ====================================================================*/
-.accordion_one {
-  max-width: 1024px;
+/*アコーディオン全体*/
+.accordion-area {
+  list-style: none;
+  width: 96%;
+  max-width: 900px;
   margin: 0 auto;
 }
-
-.accordion_one .accordion_header {
-  background-color: #db0f2f;
-  color: #fff;
-  font-size: 26px;
-  font-weight: bold;
-  padding: 20px 11%;
-  text-align: center;
-  position: relative;
-  z-index: 1;
+.accordion-area li {
+  margin: 10px 0;
+}
+.accordion-area section {
+  border: 1px solid #ccc;
+}
+.accordion-area section.-sec01 {
+  color: #963954;
+  border: 1px solid #963954;
+}
+.accordion-area section.-sec01 .title::before, .accordion-area section.-sec01 .title::after {
+  background: #963954;
+}
+.accordion-area section.-sec02 {
+  color: #e4801b;
+  border: 1px solid #e4801b;
+}
+.accordion-area section.-sec02 .title::before, .accordion-area section.-sec02 .title::after {
+  background: #e4801b;
+}
+.accordion-area section.-sec03 {
+  color: #cb686c;
+  border: 1px solid #cb686c;
+}
+.accordion-area section.-sec03 .title::before, .accordion-area section.-sec03 .title::after {
+  background: #cb686c;
+}
+.accordion-area .title {
+  position: relative; /*+マークの位置基準とするためrelative指定*/
   cursor: pointer;
-  transition-duration: 0.2s;
+  font-size: 1rem;
+  margin: 5px 0;
+  font-weight: normal;
+  padding: 3% 3% 3% 50px;
+  transition: all 0.5s ease;
 }
-
-.accordion_one:nth-of-type(2) .accordion_header {
-  background-color: #ff9a05;
-}
-
-.accordion_one:nth-of-type(3) .accordion_header {
-  background-color: #1c85d8;
-}
-
-.accordion_one .accordion_header:hover {
-  opacity: 0.8;
-}
-
-.accordion_one .accordion_header .i_box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.accordion-area .title::before, .accordion-area .title::after {
   position: absolute;
-  top: 50%;
-  right: 5%;
-  width: 40px;
-  height: 40px;
-  border: 1px solid #fff;
-  margin-top: -20px;
-  box-sizing: border-box;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  transform-origin: center center;
-  transition-duration: 0.2s;
-}
-
-.accordion_one .accordion_header .i_box .one_i {
-  display: block;
-  width: 18px;
-  height: 18px;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  transform-origin: center center;
-  transition-duration: 0.2s;
-  position: relative;
-}
-
-.accordion_one .accordion_header.open .i_box {
-  -webkit-transform: rotate(-360deg);
-  transform: rotate(-360deg);
-}
-
-.accordion_one .accordion_header .i_box .one_i:before, .accordion_one .accordion_header .i_box .one_i:after {
-  display: flex;
   content: "";
-  background-color: #fff;
-  border-radius: 10px;
-  width: 18px;
-  height: 4px;
-  position: absolute;
-  top: 7px;
-  left: 0;
-  -webkit-transform: rotate(0deg);
+  width: 15px;
+  height: 2px;
+  background-color: #333;
+  transition: all 0.5s;
+}
+.accordion-area .title::before {
+  top: 48%;
+  left: 15px;
   transform: rotate(0deg);
-  transform-origin: center center;
 }
-
-.accordion_one .accordion_header .i_box .one_i:before {
-  width: 4px;
-  height: 18px;
-  top: 0;
-  left: 7px;
+.accordion-area .title::after {
+  top: 48%;
+  left: 15px;
+  transform: rotate(90deg);
 }
-
-.accordion_one .accordion_header.open .i_box .one_i:before {
-  content: none;
+.accordion-area .title.close::before {
+  transform: rotate(45deg);
 }
-
-.accordion_one .accordion_header.open .i_box .one_i:after {
-  -webkit-transform: rotate(-45deg);
+.accordion-area .title.close::after {
   transform: rotate(-45deg);
 }
-
-.accordion_one .accordion_inner {
-  display: none;
-  padding: 30px 30px;
-  border-left: 2px solid #db0f2f;
-  border-right: 2px solid #db0f2f;
-  border-bottom: 2px solid #db0f2f;
-  box-sizing: border-box;
+.accordion-area .box {
+  display: none; /*はじめは非表示*/
+  background: #f3f3f3;
+  margin: 0 3% 3% 3%;
+  padding: 3%;
+  transition: 0.1s;
 }
 
-.accordion_one:nth-of-type(2) .accordion_inner {
-  border-left: 2px solid #ff9a05;
-  border-right: 2px solid #ff9a05;
-  border-bottom: 2px solid #ff9a05;
-}
-
-.accordion_one:nth-of-type(3) .accordion_inner {
-  border-left: 2px solid #1c85d8;
-  border-right: 2px solid #1c85d8;
-  border-bottom: 2px solid #1c85d8;
-}
-
-.accordion_one .accordion_inner .box_one {
-  height: 300px;
-}
-
-.accordion_one .accordion_inner p.txt_a_ac {
-  margin: 0;
-}
-
-@media screen and (max-width: 1024px) {
-  .accordion_one .accordion_header {
-    font-size: 18px;
-  }
-  .accordion_one .accordion_header .i_box {
-    width: 30px;
-    height: 30px;
-    margin-top: -15px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .accordion_one .accordion_header {
-    font-size: 16px;
-    text-align: left;
-    padding: 15px 60px 15px 15px;
-  }
-}
 /*
     Colorbox Core Style:
     The following CSS is consistent between example themes and should not be altered.

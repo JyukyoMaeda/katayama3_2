@@ -3,127 +3,94 @@
     アコーディオン関係
 
 ====================================================================*/
- .accordion_one {
-    max-width: 1024px;
-    margin: 0 auto;
+ 
+/*アコーディオン全体*/
+.accordion-area{
+  list-style: none;
+  width: 96%;
+  max-width: 900px;
+  margin:0 auto;
+  li{
+    margin: 10px 0;
   }
-.accordion_one .accordion_header {
-    background-color: #db0f2f;
-    color: #fff;
-    font-size: 26px;
-    font-weight: bold;
-    padding: 20px 11%;
-    text-align: center;
-    position: relative;
-    z-index: +1;
+  section {
+    border: 1px solid #ccc;
+    &.-sec01{
+      color: #963954;
+      border: 1px solid #963954;
+      .title{
+        &::before,
+        &::after{
+          background: #963954;
+        }
+      }
+    }
+    &.-sec02{
+      color: #e4801b;
+      border: 1px solid #e4801b;
+      .title{
+        &::before,
+        &::after{
+          background: #e4801b;
+        }
+      }
+    }
+    &.-sec03{
+      color: #cb686c;
+      border: 1px solid #cb686c;
+      .title{
+        &::before,
+        &::after{
+          background: #cb686c;
+        }
+      }
+    }
+  }
+  .title {
+    position: relative;/*+マークの位置基準とするためrelative指定*/
     cursor: pointer;
-    transition-duration: 0.2s;
-  }
-   .accordion_one:nth-of-type(2) .accordion_header {
-      background-color: #ff9a05;
-  }
-   .accordion_one:nth-of-type(3) .accordion_header {
-      background-color: #1c85d8;
-  }
-   .accordion_one .accordion_header:hover {
-    opacity: .8;
-  }
-   .accordion_one .accordion_header .i_box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    right: 5%;
-    width: 40px;
-    height: 40px;
-    border: 1px solid #fff;
-    margin-top: -20px;
-    box-sizing: border-box;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    transform-origin: center center;
-    transition-duration: 0.2s;
-  }
-   .accordion_one .accordion_header .i_box .one_i {
-    display: block;
-    width: 18px;
-    height: 18px;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    transform-origin: center center;
-    transition-duration: 0.2s;
-    position: relative;
-  }
-   .accordion_one .accordion_header.open .i_box {
-    -webkit-transform: rotate(-360deg);
-    transform: rotate(-360deg);
-  }
-   .accordion_one .accordion_header .i_box .one_i:before,  .accordion_one .accordion_header .i_box .one_i:after {
-    display: flex;
-    content: '';
-    background-color: #fff;
-    border-radius: 10px;
-    width: 18px;
-    height: 4px;
-    position: absolute;
-    top: 7px;
-    left: 0;
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-    transform-origin: center center;
-  }
-   .accordion_one .accordion_header .i_box .one_i:before {
-    width: 4px;
-    height: 18px;
-    top: 0;
-    left: 7px;
-  }
-   .accordion_one .accordion_header.open .i_box .one_i:before {
-    content: none;
-  }
-   .accordion_one .accordion_header.open .i_box .one_i:after {
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-  }
-   .accordion_one .accordion_inner {
-    display: none;
-    padding: 30px 30px;
-    border-left: 2px solid #db0f2f;
-    border-right: 2px solid #db0f2f;
-    border-bottom: 2px solid #db0f2f;
-    box-sizing: border-box;
-  }
-   .accordion_one:nth-of-type(2) .accordion_inner {
-    border-left: 2px solid #ff9a05;
-    border-right: 2px solid #ff9a05;
-    border-bottom: 2px solid #ff9a05;
-  }
-   .accordion_one:nth-of-type(3) .accordion_inner {
-    border-left: 2px solid #1c85d8;
-    border-right: 2px solid #1c85d8;
-    border-bottom: 2px solid #1c85d8;
-  }
-   .accordion_one .accordion_inner .box_one {
-    height: 300px;
-  }
-   .accordion_one .accordion_inner p.txt_a_ac {
-    margin: 0;
-  }
-  @media screen and (max-width: 1024px) {
-     .accordion_one .accordion_header {
-      font-size: 18px;
+    font-size:1rem;
+    margin: 5px 0;
+    font-weight: normal;
+    padding: 3% 3% 3% 50px;
+    transition: all .5s ease;
+
+    // タイトル > 共有 > 疑似要素
+    &::before,
+    &::after{
+      position: absolute;
+      content:'';
+      width: 15px;
+      height: 2px;
+      background-color: #333;
+      transition: all .5s;
     }
-     .accordion_one .accordion_header .i_box {
-      width: 30px;
-      height: 30px;
-      margin-top: -15px;
+    &::before{
+      top:48%;
+      left: 15px;
+      transform: rotate(0deg);
+    }
+    &::after{
+      top:48%;
+      left: 15px;
+      transform: rotate(90deg);
+    }
+
+    &.close{
+      &::before{
+        transform: rotate(45deg);
+      }
+      &::after{
+        transform: rotate(-45deg);
+      }
     }
   }
-  @media screen and (max-width: 767px) {
-     .accordion_one .accordion_header {
-      font-size: 16px;
-      text-align: left;
-      padding: 15px 60px 15px 15px;
-    }
+  .box {
+    display: none;/*はじめは非表示*/
+    background: #f3f3f3;
+    margin:0 3% 3% 3%;
+    padding: 3%;
+    transition: .1s;
+    
   }
+}

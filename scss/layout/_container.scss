@@ -20,6 +20,30 @@
 		@include mq(sp){
 			margin-top: 32.1%;
 		}
+		@include mq(tb){
+			margin-top: 18%;
+			#setsubi01{
+				margin-top: -10%;
+			}
+		}
+		@include mq(tb-pc1400){
+			margin-top: 15.1%;
+			#setsubi01{
+				margin-top: auto;
+			}
+		}
+	}
+}
+.p-plan,
+.p-free-plan,
+.p-location{
+	.l-container{
+		@include mq(sp){
+			margin-top: 32.1%;
+		}
+		@include mq(tb){
+			margin-top: 18%;
+		}
 		@include mq(tb-pc1400){
 			margin-top: 15.1%;
 		}

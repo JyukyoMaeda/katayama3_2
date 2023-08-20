@@ -190,13 +190,20 @@
 
 			//  自由設計
 			&.-sliderArea{
+				top: 30%;
+				left: 50%;
+				transform: translateX(-50%);
 				@include mq(tb){
 					top: 40%;
-					left: 50%;
-					transform: translateX(-50%);
 				}
 			}
 			&.-free_btn{
+				@include mq(sp){
+					top: 79%;
+					left: 50%;
+					transform: translateX(-50%);
+					width: 45%;
+				}
 				@include mq(tb){
 					top: 65%;
 					left: 29.5%;
@@ -204,6 +211,9 @@
 				}
 			}
 			&.-f-cloud{
+				top: 30%;
+				left: 65%;
+				width: 35%;
 				@include mq(tb){
 					top: 35%;
 					left: 55%;

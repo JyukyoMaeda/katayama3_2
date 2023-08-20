@@ -74,6 +74,9 @@ img{
 	width: 95% !important;
 	max-width: 1200px;
 	margin: auto;
+	&.-s70{
+		width: 70% !important;
+	}
 	&.-s85{
 		width: 85% !important;
 	}

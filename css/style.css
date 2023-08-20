@@ -128,6 +128,9 @@ img {
   max-width: 1200px;
   margin: auto;
 }
+.w1200.-s70 {
+  width: 70% !important;
+}
 .w1200.-s85 {
   width: 85% !important;
 }
@@ -487,8 +490,41 @@ img {
     margin-top: 32.1%;
   }
 }
+@media screen and (min-width: 767px) {
+  .p-setsubi .l-container {
+    margin-top: 18%;
+  }
+  .p-setsubi .l-container #setsubi01 {
+    margin-top: -10%;
+  }
+}
 @media screen and (min-width: 1400px) {
   .p-setsubi .l-container {
+    margin-top: 15.1%;
+  }
+  .p-setsubi .l-container #setsubi01 {
+    margin-top: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .p-plan .l-container,
+  .p-free-plan .l-container,
+  .p-location .l-container {
+    margin-top: 32.1%;
+  }
+}
+@media screen and (min-width: 767px) {
+  .p-plan .l-container,
+  .p-free-plan .l-container,
+  .p-location .l-container {
+    margin-top: 18%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .p-plan .l-container,
+  .p-free-plan .l-container,
+  .p-location .l-container {
     margin-top: 15.1%;
   }
 }
@@ -688,11 +724,22 @@ img {
     width: 100%;
   }
 }
+.l-contents.-img-bg .l-contentsBox.-sliderArea {
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
 @media screen and (min-width: 767px) {
   .l-contents.-img-bg .l-contentsBox.-sliderArea {
     top: 40%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .l-contents.-img-bg .l-contentsBox.-free_btn {
+    top: 79%;
     left: 50%;
     transform: translateX(-50%);
+    width: 45%;
   }
 }
 @media screen and (min-width: 767px) {
@@ -701,6 +748,11 @@ img {
     left: 29.5%;
     width: 13%;
   }
+}
+.l-contents.-img-bg .l-contentsBox.-f-cloud {
+  top: 30%;
+  left: 65%;
+  width: 35%;
 }
 @media screen and (min-width: 767px) {
   .l-contents.-img-bg .l-contentsBox.-f-cloud {
@@ -820,11 +872,17 @@ img {
   .l-flex--area .l-flex--contents.-header-contents .flexItem.-logo {
     padding: 0 3%;
   }
+  .l-flex--area .l-flex--contents.-header-contents .flexItem.-logo a {
+    display: block;
+  }
 }
 @media screen and (min-width: 767px) {
   .l-flex--area .l-flex--contents.-header-contents .flexItem.-logo {
     width: 15%;
     padding: 0 2.5%;
+  }
+  .l-flex--area .l-flex--contents.-header-contents .flexItem.-logo a {
+    display: block;
   }
   .l-flex--area .l-flex--contents.-header-contents .flexItem.-center {
     width: 55%;

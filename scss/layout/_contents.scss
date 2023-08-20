@@ -83,22 +83,22 @@
 
 			// コンセプト
 			&.-cloud{
-				width: 45%;
+				width: 42%;
 				@include mq(tb){
 					width: 20%;
 				}
 			}
 			&.-cloud01{
-				top: 50%;
-				left: 50%;
+				top: 65%;
+				left: 5%;
 				@include mq(tb){
 					top: 39%;
 					left: 30%;
 				}
 			}
 			&.-cloud02{
-				top: 50%;
-				left: 50%;
+				top: 65%;
+				left: 52%;
 				@include mq(tb){
 					top: 44%;
 					left: 72%;
@@ -106,27 +106,53 @@
 				}
 			}
 			&.-cloud03{
-				top: 50%;
-				left: 50%;
+
 				@include mq(tb){
 					top: 66%;
 					left: 43%;
 					width: 17%;
 				}
 			}
+			&.-sp-c-sliderArea{
+				@include mq(sp){
+					top: 29%;
+					left: 50%;
+					transform: translateX(-50%);
+					width: 100%;
+				}
+			}
 
 			// for_mama
 			&.-mama_btn{
+				top: 44%;
+				left: 50%;
+				width: 45%;
+				@include mq(sp){
+					transform: translateX(-50%);
+				}
 				@include mq(tb){
 					top: 60%;
 					left: 16.5%;
 					width: 13%;
 				}
+			}
 
+			// プラン
+			&.-s-kukaku-sliderArea{
+				@include mq(sp){
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 100%;
+				}
 			}
 
 			// 設備・仕様
 			&.-setsubi-point{
+				top: 27%;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 85%;
 				@include mq(tb){
 					top: 27%;
 					left: 50%;
@@ -144,7 +170,7 @@
 			&.-setsubi-cloud01{
 				@include mq(tb){
 					top: 50%;
-					left: 50%;
+					left: 51%;
 				}
 			}
 			&.-setsubi-cloud02{
@@ -153,7 +179,37 @@
 					left: 74%;
 				}
 			}
+			&.-s-setsubi-sliderArea01{
+				@include mq(sp){
+					top: 65%;
+					left: 50%;
+					transform: translateX(-50%);
+					width: 100%;
+				}
+			}
 
+			//  自由設計
+			&.-sliderArea{
+				@include mq(tb){
+					top: 40%;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+			}
+			&.-free_btn{
+				@include mq(tb){
+					top: 65%;
+					left: 29.5%;
+					width: 13%;
+				}
+			}
+			&.-f-cloud{
+				@include mq(tb){
+					top: 35%;
+					left: 55%;
+					width: 14%;
+				}
+			}
 
 
 			.l-contentsBox--wrapper{

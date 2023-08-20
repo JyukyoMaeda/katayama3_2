@@ -15,3 +15,13 @@
 	}
 }
 
+.p-setsubi{
+	.l-container{
+		@include mq(sp){
+			margin-top: 32.1%;
+		}
+		@include mq(tb-pc1400){
+			margin-top: 15.1%;
+		}
+	}
+}
